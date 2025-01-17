@@ -8,6 +8,7 @@
 // konstruktor kann private, protected, public oder default sein
 
 public class Person {
+    String name;
     int age;
     double height;
 
