@@ -12,18 +12,30 @@ public class App {
          */
         // output("Hello everyone!🙌\n");
         Cat cat = new Cat();
-        output("\nBlick von aussen: " + cat);
-        output("\nBlick von innen : " + cat.getInstanceVariable());
-        cat.getInstanceVariable();
+        // output("\nBlick von aussen: " + cat);
+        // output("\nBlick von innen : " + cat.getInstanceVariable());
+        // cat.getInstanceVariable();
 
-        output("__________________________\n");
 
-        Cat cat2 = new Cat();
-        output("Blick von aussen: " + cat2);
-        output("\nBlick von innen : " + cat.getInstanceVariable());
-        cat2.getInstanceVariable();
+        // werte zuweisen
+        cat.firstName = "\nOskar";
+        cat.forcColor = "Rot";
+        cat.age = 2;
 
-        output("__________________________\n");
+
+        // Werte audgeben
+        output(cat.firstName);
+        output(cat.forcColor);
+        output(Integer.toString(cat.age));
+
+        //  output("__________________________\n");
+
+        // Cat cat2 = new Cat();
+        // output("Blick von aussen: " + cat2);
+        // output("\nBlick von innen : " + cat.getInstanceVariable());
+        // cat2.getInstanceVariable();
+
+         output("__________________________\n");
 
     }
 
