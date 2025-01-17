@@ -1,8 +1,8 @@
 
 public class App {
     public static void main(String[] args) {
-        // System.out.println("\nHello world!\n");
-        
+        System.out.println("\nHello world!🙌\n");
+
         /*
          * Instanziierung --> Erzeugen eines Objektes
          * Objekt <---> Instanz
@@ -10,32 +10,28 @@ public class App {
          * Cat --> Referenztyp(Klasse)
          * 
          */
-        // output("Hello everyone!🙌\n");
-        Cat cat = new Cat();
+
+        Cat cat = new Cat("Oskar", "Rot", 2);
+
         // output("\nBlick von aussen: " + cat);
         // output("\nBlick von innen : " + cat.getInstanceVariable());
         // cat.getInstanceVariable();
 
+        // cat.furColor = "Gold";
 
-        // werte zuweisen
-        cat.firstName = "\nOskar";
-        cat.forcColor = "Rot";
-        cat.age = 2;
-
+        // // werte zuweisen
+        // cat.firstName = "\nOskar";
+        // // cat.furColor = "Rot";
+        // cat.age = 2;
 
         // Werte audgeben
-        output(cat.firstName);
-        output(cat.forcColor);
-        output(Integer.toString(cat.age));
-
-        //  output("__________________________\n");
-
-        // Cat cat2 = new Cat();
-        // output("Blick von aussen: " + cat2);
-        // output("\nBlick von innen : " + cat.getInstanceVariable());
-        // cat2.getInstanceVariable();
+        output(cat.getFirstName());
+        output(cat.getFurColor());
+        output(Integer.toString(cat.getAge()));
 
          output("__________________________\n");
+
+       
 
     }
 
