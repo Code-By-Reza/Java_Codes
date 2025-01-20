@@ -1,42 +1,36 @@
 
 public class App {
+
     public static void main(String[] args) {
-        System.out.println("\nHello world!🙌\n");
 
-        /*
-         * Instanziierung --> Erzeugen eines Objektes
-         * Objekt <---> Instanz
-         * cat --> Referenzvariable
-         * Cat --> Referenztyp(Klasse)
-         * 
-         */
+        // Instanziierung + Wertzuweisung
+        Cat cat = new Cat("Grizabella", "white", 29);
 
-        Cat cat = new Cat("Oskar", "Rot", 2);
+        // output("Blick von aussen: " + cat);
+        // output("Blick von innen: " + cat.getInstanceVariable());
 
-        // output("\nBlick von aussen: " + cat);
-        // output("\nBlick von innen : " + cat.getInstanceVariable());
-        // cat.getInstanceVariable();
-
-        // cat.furColor = "Gold";
-
-        // // werte zuweisen
-        // cat.firstName = "\nOskar";
-        // // cat.furColor = "Rot";
-        // cat.age = 2;
-
-        // Werte audgeben
+        // Werte über Getter
         output(cat.getFirstName());
         output(cat.getFurColor());
         output(Integer.toString(cat.getAge()));
 
-         output("__________________________\n");
+        output("-----------------------");
 
-       
+        Cat cat2 = new Cat("Alonzo", "grey", 35);
+        // output("Blick von aussen: " + cat2);
+        // output("Blick von innen: " + cat2.getInstanceVariable());
+
+        cat2.setAge(36); // Setter
+
+        // Werte ausgeben
+        output(cat2.getFirstName());
+        output(cat2.getFurColor());
+        output(Integer.toString(cat2.getAge()));
 
     }
 
-    public static void output(String ouString) {
-        System.out.println(ouString);
+    public static void output(String outputStr) {
+        System.out.println(outputStr);
     }
 
 }
