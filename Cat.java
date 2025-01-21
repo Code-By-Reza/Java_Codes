@@ -4,42 +4,57 @@ public class Cat {
     private String firstName;
     private String furColor;
     private int age;
+    private boolean isFemale;
+    private int counter;
 
     public Cat(String firstName, String furColor, int age) {
         this.firstName = firstName;
         this.furColor = furColor;
         this.age = age;
+        this.isFemale = true;
     }
 
     /** Getter */
-    public String getFirstName() {
-        if (getPermission()) {
-            return firstName;
-        } else {
-            return "Sorry, no permission!";
+    public String getStringAttributes(String op) {
+        switch (op) {
+            case "#name":
+                return firstName;
+            case "#color":
+                return furColor;
+            default:
+                return "ERROR";
         }
     }
 
-    private boolean getPermission() {
-        return true;
-        // return false;
+    public String getAge() {
+        if (isFemale) {
+            return checkompliance();
+
+        } else {
+            return Integer.toString(age);
+
+        }
+
     }
 
-    public String getFurColor() {
-        return furColor;
-    }
+    // New line of code
+    private String checkompliance() {
+        counter = 1;
 
-    public int getAge() {
-        return age;
-    }
+        switch (counter) {
+            case 1:
+                return "This is an inappropriate question!";
 
-    /** Setter */
-    public void setAge(int age) {
-        this.age = age;
-    }
+            case 2:
+                return "I've told you once!"; // 2nd time
 
-    public Cat getInstanceVariable() {
-        return this;
+            case 3:
+                return "Talk to the hand!"; // 3rd time
+
+            default:
+                return "1#!?&&%"; // 4th ++
+
+        }
     }
 
 }
